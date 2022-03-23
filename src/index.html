@@ -5,24 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IThub Ekat</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        html,body {
+        body{
             overflow: hidden;
+            background: #000000;
+            margin: 0;
         }
-
-        .webgl{
+        canvas {
             position: fixed;
             top: 0;
             left: 0;
             outline: none;
+            opacity: 0;
+            transition: 1s;
+            overflow: hidden;
+        }
+        .ready {
+            opacity: 1;
+        }
+        .go-back-btn-wrapper {
+            border: 1px solid white;
+            border-radius: 2px;
+            padding: 10px 20px;
+            position: fixed;
+            margin: 20px;
+            bottom: 0;
+            background: #000;
+        }
+        .go-back-btn {
+            text-decoration: none;
+            color: white;
+        }
+        .start-screen {
+            width: 100vw;
+            height: 100vh;
+            margin: auto;
+            font-size: 2rem;
+            text-align: center;
+            display: grid;
+            align-items: center;
+        }
+        .ithub-logo{
+            width: 500px;
+        }
+        .progress-bar{
+            width: 2px;
+            height: 5px;
+            background: #fff;
+        }
+        .content{
+            display: flex;
+            margin: 0 20vw;
+        }
+        .progress-wrapper{
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            color: white;
         }
     </style>
 </head>
 <body>
     <canvas class="webgl"></canvas>
+        <div class="go-back-btn-wrapper">
+            <a class='go-back-btn' href="/">
+                Вернуться на главную
+            </a>
+        </div>
+    <div class='start-screen'>
+        <div class="content">
+            <img src="logo.jpg" alt="logo" class="ithub-logo">
+            <div class="progress-wrapper">
+                <div class="description">ITJourney 3D</div>
+                <div>
+
+                <div class="progress-bar"></div>
+                <div class="progress-in-percents">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
