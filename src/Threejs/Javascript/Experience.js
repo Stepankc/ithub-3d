@@ -39,6 +39,7 @@ export default class Experience {
     });
     this.resources.on('ready', () => {
       this.canvas.classList.add('ready');
+      document.querySelector('.start-screen').style.display = 'none'
     });
   }
 
