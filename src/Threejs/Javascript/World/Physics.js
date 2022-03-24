@@ -123,11 +123,11 @@ export default class Physics {
       wheelMaxSuspensionTravel: 0.4,
       wheelCustomSlidingRotationalSpeed: -30,
       wheelMass: 5,
-      controlsSteeringSpeed: 0.005, // skate wheels turning speed
+      controlsSteeringSpeed: 0.005,
       controlsSteeringMax: Math.PI * 0.07,
       controlsSteeringQuad: true,
-      controlsAcceleratingMaxSpeed: 0.055,
-      controlsAcceleratingSpeed: 2,
+      controlsAcceleratingMaxSpeed: 0.07,
+      controlsAcceleratingSpeed: 1.5,
       controlsAcceleratingQuad: true,
       controlsBrakeStrength: 0.45,
     };

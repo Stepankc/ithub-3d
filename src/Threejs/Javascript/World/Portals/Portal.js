@@ -49,15 +49,6 @@ export default class Portal extends EventEmitter {
           this.timer.setCurrentPortal(this.name);
           this.elapsedTimeInPortal += this.time.delta / 30;
 
-          // console.log(
-          //   'X: ',
-          //   Math.abs(this.mainHero.position.x ),
-          //   Math.abs(this.position.x),
-          //   'Y: ',
-          //   Math.abs(this.mainHero.position.y),
-          //   Math.abs(this.position.y),
-          // );
-
           this.timer.makeTimerVisible();
         } else if (this.elapsedTimeInPortal > 0) {
           this.elapsedTimeInPortal -= this.time.delta / 30;

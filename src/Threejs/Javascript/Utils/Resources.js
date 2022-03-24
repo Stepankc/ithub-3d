@@ -43,15 +43,11 @@ export default class Resources extends EventEmitter {
     const progressBar = document.querySelector('.progress-bar')
     const percents = document.querySelector('.progress-in-percents')
     this.loadingManager = new THREE.LoadingManager(
-      () => {
-        console.log('loaded');
-      },
+      () => {},
       (itemUrl, itemsLoaded, itemsTotal) => {
         const result = Math.round(itemsLoaded / itemsTotal * 100) + '%'
         progressBar.style.width = result
         percents.textContent = result
-
-        console.log(itemsLoaded / itemsTotal);
       }
     );
   }
