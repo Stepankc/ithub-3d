@@ -1,4 +1,6 @@
 import * as THREE from 'three';
+import shaderFragment from '../../Shaders/FloorShadow/fragment.glsl';
+import shaderVertex from '../../Shaders/FloorShadow/vertex.glsl';
 
 export default function FloorShadowMaterial() {
   const uniforms = {
@@ -7,35 +9,11 @@ export default function FloorShadowMaterial() {
     uAlpha: { value: null },
   };
 
-  const material = new THREE.ShaderMaterial({
+  return new THREE.ShaderMaterial({
     wireframe: false,
     transparent: true,
     uniforms,
-    vertexShader: `
-      varying vec2 vUv;
-
-      void main()
-      {
-          vUv = uv;
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-      }
-    `,
-    fragmentShader: `
-      uniform sampler2D tShadow;
-      uniform vec3 uShadowColor;
-      uniform float uAlpha;
-      
-      varying vec2 vUv;
-      
-      void main()
-      {
-          float shadowAlpha = 1.0 - texture2D(tShadow, vUv).r;
-          shadowAlpha *= uAlpha;
-      
-          gl_FragColor = vec4(uShadowColor, shadowAlpha);
-      }
-      `,
+    vertexShader: shaderVertex,
+    fragmentShader: shaderFragment,
   });
-
-  return material;
 }
