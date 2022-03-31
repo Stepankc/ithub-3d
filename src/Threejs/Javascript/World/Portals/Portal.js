@@ -25,19 +25,8 @@ export default class Portal extends EventEmitter {
     this.skateIsInArea = false;
     this.elapsedTimeInPortal = 0;
 
-    this.setPortal();
     this.setTimer();
     this.observeSkate();
-  }
-
-  setPortal() {
-    this.portal = {
-      geometry: new THREE.CircleGeometry(this.size / 2, 6),
-      material: new THREE.MeshBasicMaterial({ color: 0x9e3169 }),
-    };
-    this.portal.mesh = new THREE.Mesh(this.portal.geometry, this.portal.material);
-
-    this.container.add(this.portal.mesh);
   }
 
   setTimer() {

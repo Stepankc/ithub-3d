@@ -32,7 +32,7 @@ export default class Map {
       mass: 0,
     });
     this.objects.add({
-      base: this.resources.items.IthubEkatText.scene,
+      base: this.resources.items.IthubEkatText1.scene,
       collision: this.resources.items.IthubEkatCollision2.scene,
       offset: new THREE.Vector3(-48.5, 34.5, 2),
       rotation: new THREE.Euler(0, 0, 1),
@@ -70,8 +70,70 @@ export default class Map {
       offset: new THREE.Vector3(0, 0, 0),
       mass: 0,
     });
+    this.objects.add({
+      base: this.resources.items.coursesText.scene,
+      collision: this.resources.items.coursesCollision.scene,
+      floorShadowTexture: this.resources.items.MainMapFloorShadow,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
+    this.objects.add({
+      base: this.resources.items.specialtyText.scene,
+      collision: this.resources.items.specialtyCollision.scene,
+      floorShadowTexture: this.resources.items.MainMapFloorShadow,
+      offset: new THREE.Vector3(0, 0, 0),
+      mass: 0,
+    });
   }
   setDynamic() {
+    this.objects.add({
+      base: this.resources.items.system.scene,
+      collision: this.resources.items.systemCollision.scene,
+      offset: new THREE.Vector3(3, -70, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 1.5,
+    });
+    this.objects.add({
+      base: this.resources.items.system.scene,
+      collision: this.resources.items.systemCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 1.5,
+    });
+    this.objects.add({
+      base: this.resources.items.dText.scene,
+      collision: this.resources.items.dCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
+    this.objects.add({
+      base: this.resources.items.oText.scene,
+      collision: this.resources.items.oCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
+    this.objects.add({
+      base: this.resources.items.NText.scene,
+      collision: this.resources.items.NCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
+    this.objects.add({
+      base: this.resources.items.eeText.scene,
+      collision: this.resources.items.eeCollision.scene,
+      offset: new THREE.Vector3(0, 0, 0),
+      rotation: new THREE.Euler(0, 0, 0),
+      shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
+      mass: 0.7,
+    });
     this.objects.add({
       base: this.resources.items.Ps4.scene,
       collision: this.resources.items.Ps4Collision.scene,
@@ -94,7 +156,7 @@ export default class Map {
       offset: new THREE.Vector3(0, 0, 0),
       rotation: new THREE.Euler(0, 0, 0),
       shadow: { sizeX: 1.5, sizeY: 1.5, offsetZ: -0.6, alpha: 0.4 },
-      mass: 1,
+      mass: 0.7,
     });
     this.objects.add({
       base: this.resources.items.AText.scene,
@@ -227,11 +289,11 @@ export default class Map {
     // TODO: move this code to Models file or smth
   }
   setPortals() {
-    this.documentsPortal = this.portals.add('documents', { x: 45.2256, y: 26.6675 }, '/#documents');
+    this.documentsPortal = this.portals.add('documents', { x: 45.2256, y: 26.6675 }, '/main#documents');
     this.commissionPortal = this.portals.add('commission', { x: -42.5098, y: 30.511 }, '/commission');
-    this.reviewsPortal = this.portals.add('reviews', { x: 42.412, y: -24.8583 }, '/#reviews');
-    this.coursesPortal = this.portals.add('courses', { x: -45.6849, y: -20.8606 }, '/courses');
-    this.specialtiesPortal = this.portals.add('specialties', { x: 2.73161, y: 52.8746 }, '/#specialities');
+    this.reviewsPortal = this.portals.add('reviews', { x: 42.412, y: -24.8583 }, '/main#reviews');
+    this.aboutCollegePortal = this.portals.add('about', { x: -45.6849, y: -20.8606 }, '/about');
+    this.specialtiesPortal = this.portals.add('specialties', { x: 2.73161, y: 52.8746 }, '/main#specialities');
   }
   setZones() {
     this.collegeBuildingZone = this.zones.add({ x: -40, y: 30 }, { x: 40, y: 40 });

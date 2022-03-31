@@ -20,8 +20,9 @@ import AText from '../Models/Text/a/A.glb'
 import VCollision from '../Models/Text/v/VCollision.glb'
 import VText from '../Models/Text/v/V.glb'
 import IthubEkatCollision from '../Models/Text/ithubEkat/IthubEkatCollision.glb'
-import IthubEkatCollision2 from '../Models/Text/ithubEkat/IthubEkatCollision2.glb'
 import IthubEkatText from '../Models/Text/ithubEkat/IthubEkat.glb'
+import IthubEkatCollision2 from '../Models/Text/ithubEkat1/IthubEkatCollision2.glb'
+import IthubEkatText1 from '../Models/Text/ithubEkat1/IthubEkat.glb'
 import MainHero from '../Models/MainHero/MainHero.glb'
 import Ps4 from '../Models/decorations/ps4.glb'
 import Ps4Collision from '../Models/decorations/ps4Collision.glb'
@@ -39,10 +40,94 @@ import RText from '../Models/Text/r/R.glb'
 import RCollision from '../Models/Text/r/RCollision.glb'
 import eText from '../Models/Text/e/e.glb'
 import eCollision from '../Models/Text/e/eCollision.glb'
+import eeText from '../Models/Text/Node/e/e.glb'
+import eeCollision from '../Models/Text/Node/e/eCollision.glb'
 import ttText from '../Models/Text/tt/tt.glb'
 import ttCollision from '../Models/Text/tt/ttCollision.glb'
+import NText from '../Models/Text/Node/N/N.glb'
+import NCollision from '../Models/Text/Node/N/NCollision.glb'
+import oText from '../Models/Text/Node/o/o.glb'
+import oCollision from '../Models/Text/Node/o/oCollision.glb'
+import dText from '../Models/Text/Node/d/d.glb'
+import dCollision from '../Models/Text/Node/d/dCollision.glb'
+import coursesText from '../Models/Text/courses/courses.glb'
+import coursesCollision from '../Models/Text/courses/coursesCollision.glb'
+import specialtyText from '../Models/Text/specialty/specialty.glb'
+import specialtyCollision from '../Models/Text/specialty/specialtyCollision.glb'
+import system from '../Models/decorations/system/system.glb'
+import systemCollision from '../Models/decorations/system/systemCollision.glb'
 
 const sources = [
+  {
+    name: 'system',
+    type: 'gltfModel',
+    path: system,
+  },
+  {
+    name: 'systemCollision',
+    type: 'gltfModel',
+    path: systemCollision,
+  },
+  {
+    name: 'specialtyText',
+    type: 'gltfModel',
+    path: specialtyText,
+  },
+  {
+    name: 'specialtyCollision',
+    type: 'gltfModel',
+    path: specialtyCollision,
+  },
+  {
+    name: 'coursesText',
+    type: 'gltfModel',
+    path: coursesText,
+  },
+  {
+    name: 'coursesCollision',
+    type: 'gltfModel',
+    path: coursesCollision,
+  },
+  {
+    name: 'dText',
+    type: 'gltfModel',
+    path: dText,
+  },
+  {
+    name: 'dCollision',
+    type: 'gltfModel',
+    path: dCollision,
+  },
+  {
+    name: 'oText',
+    type: 'gltfModel',
+    path: oText,
+  },
+  {
+    name: 'oCollision',
+    type: 'gltfModel',
+    path: oCollision,
+  },
+  {
+    name: 'NText',
+    type: 'gltfModel',
+    path: NText,
+  },
+  {
+    name: 'NCollision',
+    type: 'gltfModel',
+    path: NCollision,
+  },
+  {
+    name: 'eeText',
+    type: 'gltfModel',
+    path: eeText,
+  },
+  {
+    name: 'eeCollision',
+    type: 'gltfModel',
+    path: eeCollision,
+  },
   {
     name: 'ttText',
     type: 'gltfModel',
@@ -142,6 +227,11 @@ const sources = [
     name: 'IthubEkatCollision',
     type: 'gltfModel',
     path: IthubEkatCollision,
+  },
+  {
+    name: 'IthubEkatText1',
+    type: 'gltfModel',
+    path: IthubEkatText1,
   },
   {
     name: 'IthubEkatCollision2',
