@@ -14,6 +14,7 @@ export default class Portal extends EventEmitter {
     this.size = size;
     this.name = name;
     this.timer = timer;
+    this.isRedirected = false
 
     this.container = new THREE.Object3D();
     this.container.position.x = this.position.x;
@@ -32,7 +33,8 @@ export default class Portal extends EventEmitter {
   setTimer() {
     this.time.on('tick', () => {
       if (this.timer.currentPortal === null || this.timer.currentPortal === this.name) {
-        if (this.elapsedTimeInPortal > 100) {
+        if (this.elapsedTimeInPortal > 100 && !this.isRedirected) {
+          this.isRedirected = true
           this.redirect();
         } else if (this.skateIsInArea) {
           this.timer.setCurrentPortal(this.name);
