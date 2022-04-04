@@ -343,10 +343,10 @@ export default class Map {
     // TODO: move this code to Models file or smth
   }
   setPortals() {
-    this.documentsPortal = this.portals.add('documents', { x: 45.2256, y: 26.6675 }, '/main#documents');
+    this.aboutCollegePortal = this.portals.add('documents', { x: 45.2256, y: 26.6675 }, '/about');
     this.commissionPortal = this.portals.add('commission', { x: -42.5098, y: 30.511 }, '/commission');
     this.reviewsPortal = this.portals.add('reviews', { x: 42.412, y: -24.8583 }, '/main#reviews');
-    this.aboutCollegePortal = this.portals.add('about', { x: -45.6849, y: -20.8606 }, '/about');
+    this.coursesPortal = this.portals.add('about', { x: -45.6849, y: -20.8606 }, '/courses');
     this.specialtiesPortal = this.portals.add('specialties', { x: 2.73161, y: 52.8746 }, '/main#specialities');
   }
   setZones() {

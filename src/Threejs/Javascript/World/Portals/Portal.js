@@ -32,8 +32,8 @@ export default class Portal extends EventEmitter {
 
   setTimer() {
     this.time.on('tick', () => {
-      if (this.timer.currentPortal === null || this.timer.currentPortal === this.name) {
-        if (this.elapsedTimeInPortal > 100 && !this.isRedirected) {
+      if (this.timer.currentPortal === null || this.timer.currentPortal === this.name && !this.isRedirected) {
+        if (this.elapsedTimeInPortal > 100) {
           this.isRedirected = true
           this.redirect();
         } else if (this.skateIsInArea) {
